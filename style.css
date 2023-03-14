@@ -10,6 +10,8 @@
 
 body {
   font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+  user-select: none;
 }
 
 :root {
@@ -22,7 +24,7 @@ body {
 }
 
 header {
-  width: 3%;
+  width: 80px;
   height: 500px;
   background: var(--orange-dark);
   display: flex;
@@ -32,6 +34,7 @@ header {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   padding-inline: 14px;
+  position: fixed;
 }
 
 .nav--logo {
@@ -45,12 +48,14 @@ header {
 
 .nav--logo>span {
   font-size: 20px;
-  color: white;
+  color: var(--silver-light);
+  font-weight: 800;
 }
 
 nav ul {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 nav ul>li {
@@ -67,4 +72,17 @@ nav ul>li>a {
 
 a {
   text-decoration: none;
+}
+
+.container {
+  width: min(1140px, 100% - 2rem);
+  margin-inline: auto;
+}
+
+.content--hero {
+  display: grid;
+  grid-template: 500px 1fr / 490px 1fr;
+  grid-template-areas:
+    "col01 col02"
+    "col03 col04";
 }

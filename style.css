@@ -244,7 +244,7 @@ a {
   place-self: center;
 }
 
-.projects {
+.col02 {
   align-self: center;
   grid-area: col-02;
   display: flex;
@@ -286,4 +286,17 @@ a {
 .reviews-text>p {
   font-size: 24px;
   color: white;
+}
+
+.col02-row02>.heading>h1 {
+  font-size: 48px;
+  color: white;
+}
+
+.col02-row02>.heading>p {
+  font-size: 20px;
+  width: 80%;
+  color: white;
+  line-height: 45px;
+  text-align: justify;
 }

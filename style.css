@@ -264,7 +264,7 @@ a {
 
 .completed-projects>h1 {
   color: white;
-  font-size: 72px;
+  font-size: clamp(1.50rem, calc(0.46rem + 5.22vw), 4.50rem);
 }
 
 .completed-projects>p {
@@ -309,6 +309,54 @@ a {
   line-height: 45px;
 }
 
+.content--hire {
+  width: 100%;
+  padding-block: 20px;
+  height: 500px;
+  display: grid;
+  grid-template: 200px 1fr;
+  grid-template-areas:
+    "col01"
+    "col02";
+  justify-items: center;
+  gap: 20px;
+}
+
+.content--heading>h1 {
+  font-size: clamp(1.13rem, calc(0.47rem + 3.26vw), 3.00rem);
+  color: var(--black-font);
+}
+
+.content--items {
+  display: flex;
+  flex-direction: row;
+  gap: 65px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.box {
+  height: 350px;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 20px;
+  padding-inline: 20px;
+  gap: 15px;
+}
+
+.name>h3 {
+  font-weight: 600;
+}
+
+.details>p {
+  color: #222222;
+  text-align: center;
+  font-size: 0.8rem;
+  padding-inline: 25px;
+}
 
 /* Media queries */
 
@@ -434,5 +482,25 @@ a {
 @media (max-width: 560px) {
   .projects-reviews {
     display: none;
+  }
+
+  .completed-projects {
+    text-align: center;
+  }
+}
+
+@media (max-width: 1380px) {
+  .content--hire {
+    height: 1000px;
+  }
+}
+
+@media (max-width: 690px) {
+  .content--items {
+    gap: 0 !important;
+  }
+
+  .content--hire {
+    height: 1500px;
   }
 }
